@@ -1,0 +1,113 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccaca !important;
+}
+
+.col-md-5 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 42px -22px #212529;
+    padding: 0px;
+}
+
+.next-btn {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(63, 81, 181, 0.79);
+    transition: all .6s;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: whitesmoke;
+
+    &:hover {
+        background-color: #3f51b5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.start-btn {
+    @extend .next-btn;
+    background-color: rgba(85, 167, 47, 0.767);
+
+    &:hover {
+        background-color: rgb(85, 167, 47);
+    }
+}
+
+.reset-quis {
+    @extend .next-btn;
+    background-color: rgba(198, 189, 66, 0.97);
+
+    &:hover {
+        background-color: rgba(207, 197, 55, 0.97);
+        ;
+    }
+}
+
+.wrong {
+    @extend .next-btn;
+    background-color: #d74545 !important;
+}
+
+#mainQ {
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#qContainer {
+    padding: 0px 20px;
+
+    li {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    label {
+        margin-left: 10px;
+        margin-top: 5px;
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+
+
+.start-text {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.win-text {
+    @extend .start-text;
+}
+
+.scale {
+    transform: scale(1);
+    animation: scal .5s ease forwards;
+}
+
+@keyframes scal {
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
